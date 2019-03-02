@@ -12,7 +12,7 @@ def colourize(str, colour=[92, 129, 164, 198, 203, 208, 184, 154])
 
 		while i < l.length do
 			ch = l[i]
-			index += 1 if (i % div == 0) && (index < colour_length && ch != ' ') && (i != 0 || i != 1)
+			index += 1 if (i % div == 0) && (index < colour_length && ch != ' ') && i > 1
 			final_str.concat("\e[38;5;#{colour[index]}m#{ch}")
 			i += 1
 		end
